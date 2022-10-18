@@ -17,6 +17,7 @@ More precisely, in Project PART I you should:
 In case you select Cassandra and MongoDB, you should rely  on the system available on the cluster.
 
 **The aim of Project PART II is to design and develop a NoSQL data store, according to the requirements collected in Project PART I.**
+
 More precisely, in Project PART II you should:
 
 1. Design a conceptual schema for the domain identified in Project PART I. The schema should include at least three associations.
@@ -29,3 +30,21 @@ More precisely, in Project PART II you should:
 Notice that selected datasets might need to be transformed in order to be used by your application. For dataset transformation, you can rely on either data transformation tools, such as Tableaux Prep (www.tableau.com), Apache Superset (superset.apache.org) Trifacta ( www.trifacta.com ), or other ETL tools such as Talend ( www.talend.com ), or scripts in your favorite language.
 For importing datasets in the chosen system, you should refer to the available documentation for the system you have selected (e.g. https://www.datastax.com/dev/blog/simple-data-importing-and-exporting-with-cassandra for Cassandra and https://neo4j.com/developer/guide-importing-data-and-etl/perneo4J for Neo4J).
 8. Implement the workload in the selected system.
+
+**The aim of Project PART III [only for Computer Science students] is to semantically model (a portion of) the domain selected for PART I and PART II and query the resulting ontology through SPARQL.**
+
+In particular, we should:
+
+1. Model in RDFS / OWL the main classes and the main properties modeled as entities and associations in the conceptual schema designed in PART II. In addition:
+   - For each property, specify the corresponding domain and range.
+   - Express which classes are equivalent and which ones are disjoint.
+   - Specify (or add) at least an inverse property.
+   - For all the modeled properties, specify whether they are functional (or inverse functional).
+2. Model in RDF few instances among those used in PART II to populate your schema. In addition:
+   - Relate instances to the corresponding class or property.
+   - Clarify which individuals are identical and which ones are different.
+3. Specify in SPARQL at least 5 requests to be executed over the defined RDF dataset. The requests should:
+   - be structurally different (i.e., each of them should contain different constructs)
+   - include at least one CONSTUCT query
+   - refer as much as possible to the requests included in the workload specified in PART II.
+4. Check the correctness of the proposed RDF dataset, extended with RDFS /OWL constraints, and of the proposed SPARQL queries using RDF playground (http://rdfplayground.dcc.uchile.cl/) or any other RDF data store at your choice.
