@@ -1,4 +1,5 @@
 # ADM-project
+Project for the course Advanced Data Management
 ## AIM OF THE PROJECT
 The goal of the project is two folds:
 
